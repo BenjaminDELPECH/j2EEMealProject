@@ -1,0 +1,127 @@
+:root {
+    --distM: calc(0.6em + 0.5vw);
+    --distL: calc(0.7em + 0.5vw);
+    --distXL: calc(1em + 0.8vw);
+    --distXXL: calc(1.3em + 1.1vw);
+    --distS: calc(0.3em + 0.2vw);
+    --shadow1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --shadow2: 0 1px 3px rgba(0, 0, 0, 0.10), 0 1px 2px rgba(0, 0, 0, 0.14);
+    --maxWidthContainer: 1000px;
+    --titleM: calc(1.1em + 0.1vw);
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: calc(0.9em + 0.3vw);
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+}
+
+
+div {
+
+}
+
+.mealList {
+    width: 100%;
+    margin-top: calc(0.5vw + 0.5em);
+}
+
+.rowClass {
+    height: calc(3em + 0.3vw);
+}
+
+.first {
+    width: 80%;
+}
+
+.firstHeader {
+    width: 80%;
+}
+
+.second {
+
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color:#E5E2E1;
+}
+
+.page-container {
+    width: 100%;
+    margin: auto;
+    max-width: 800px;
+    margin-top: var(--distM);
+    padding: var(--distS);
+}
+
+.header {
+    padding: var(--distM);
+    width: 100%;
+    background-color: #FFF;
+    box-shadow: var(--shadow2);
+}
+
+.header_title {
+    margin: auto 0;
+    display: flex;
+    margin-left: calc(1em + 0.5vw);
+    font-size: calc(1.5em + 0.3vw);
+    font-family: "Titillium Web", sans-serif;
+    cursor: pointer;
+}
+.division{
+    margin-top:var(--distXL);
+}
+.sub-division{
+    margin-top:var(--distS);
+}
+
+.sub-container {
+    background-color: #FFF;
+    padding: var(--distM);
+}
+
+@media screen and (min-width: 800px) {
+    .sub-container {
+        box-shadow: var(--shadow2);
+    }
+}
+
+.button1 {
+    text-decoration: none;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    border: 0px;
+
+}
+
+.blueButton {
+    color: white;
+    background-color: #007bff;
+}
+
+.redButton {
+    color: white;
+    background-color: #dc3545;
+}
+
+.titleM{
+    font-size:var(--titleM);
+}
+.input1{
+    font-size:var(--titleM);
+}
