@@ -126,7 +126,7 @@ body {
 }
 
 .login > header h2 {
-    margin: 50px 0 10px 0;
+    margin:calc(1em + 0.2vw);
 }
 
 .login > header h4 {
@@ -137,7 +137,6 @@ body {
 
 /* Form */
 .login-form {
-    padding: 15px;
     box-sizing: border-box;
 }
 
@@ -207,4 +206,8 @@ body {
 
 .login-button.raised:hover {
     background: #FDAB43;
+}
+
+.authenticateFooter{
+    margin-top:calc(1.3em + 0.5vw);
 }

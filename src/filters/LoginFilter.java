@@ -22,7 +22,7 @@ public class LoginFilter implements Filter{
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
         HttpSession session = req.getSession();
 
-        String authenticateUrl = req.getContextPath() + "/authenticate.xhtml";
+        String authenticateUrl = req.getContextPath() + "/authenticate/authenticate.xhtml";
         String loggedUrl = req.getContextPath() + "/index.xhtml";
 
         boolean logged = session != null && session.getAttribute("userSession") != null;

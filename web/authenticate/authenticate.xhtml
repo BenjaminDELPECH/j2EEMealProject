@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+>
+<h:head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible"/>
+    <h:outputStylesheet library="material" name="material.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <h:outputStylesheet library="css" name="style.css"/>
+    <h:outputStylesheet library="css" name="authenticate.css"/>
+
+</h:head>
+<h:body>
+    <div class="main-container">
+        <div style="margin:auto;">
+            <div class="login-container">
+                <section class="login" id="login">
+                    <header>
+                        <h2>#{userView.subscribing ? 'Sign Up' : 'Sign In'}</h2>
+                    </header>
+                    <div class="container-content-authenticateForm">
+                        <div>
+                            <h:form class="login-form">
+                                <div style="margin-bottom:calc(0.9em + 0.2vw)">
+                                    <ui:repeat value="#{userView.errors}" var="error">
+                                        <div class="error">
+                                            #{error}
+                                        </div>
+                                    </ui:repeat>
+                                </div>
+
+                                Username :
+                                <h:inputText value="#{userView.username}" id="username"
+                                             class="login-input"/>
+                                <br/>
+
+                                Password
+                                <h:inputSecret value="#{userView.password}" id="password"
+                                             class="login-input"  />
+                                <br/>
+
+
+
+                                <h:commandButton action="#{userActions.register}"
+                                                 rendered="#{userView.subscribing}"
+                                                 value="#{'Validate'}"
+                                                 styleClass="button1"
+                                />
+                                <h:commandButton action="#{userActions.loggin}"
+                                                 rendered="#{!userView.subscribing}"
+                                                 value="#{'Validate'}"
+                                                 styleClass="button1"
+                                />
+                            </h:form>
+                        </div>
+                        <ui:include src="authenticateFooter.xhtml"/>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <h:outputScript library="material" name="material.min.js" />
+</h:body>
+</html>

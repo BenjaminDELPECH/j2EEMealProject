@@ -1,5 +1,2 @@
 
-^squid:S3252)";Use static access with "actions.BasicActions" for "update".(ÊÏÃ‡øÿÿÿÿ8œ‰ÄÒÜ-
-[squid:UselessImportCheck
-"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8­èÁÚ-
-^squid:S3252.";Use static access with "actions.BasicActions" for "delete".(ìü×Óıÿÿÿÿ8ä÷îÒÜ-
+nsquid:UselessImportCheck"CRemove this unused import 'javax.enterprise.context.RequestScoped'.(‚Õ…½8ÔÉ’İ-

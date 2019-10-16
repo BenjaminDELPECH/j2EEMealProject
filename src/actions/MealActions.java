@@ -7,14 +7,12 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.io.Serializable;
 import java.util.List;
 
 @RequestScoped
 @Named
-public class MealActions extends BasicActions implements Serializable {
+public class MealActions implements Serializable {
 
 
     @Inject
@@ -22,11 +20,9 @@ public class MealActions extends BasicActions implements Serializable {
 
 
     public void insert(){
-        EntityManager em = emf.createEntityManager();
-        em.getTransaction().begin();
+        EntityManager em = UtilsActions.getEntityManager();
         em.persist(mealView.getMeal());
-        em.getTransaction().commit();
-        em.close();
+        UtilsActions.endTransaction(em);
         mealView.setMeal(new MealEntity());
         mealView.setMealList(getAll());
     }
@@ -34,11 +30,9 @@ public class MealActions extends BasicActions implements Serializable {
 
 
     public static List<MealEntity> getAll(){
-        EntityManager em = emf.createEntityManager();
-        em.getTransaction().begin();
+        EntityManager em = UtilsActions.getEntityManager();
         List<MealEntity> mealList = em.createQuery("from MealEntity ", MealEntity.class).getResultList();
-        em.getTransaction().commit();
-        em.close();
+        UtilsActions.endTransaction(em);
         return mealList;
     }
 }

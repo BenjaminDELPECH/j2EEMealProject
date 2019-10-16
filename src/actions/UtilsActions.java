@@ -6,22 +6,30 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public abstract class BasicActions {
+public class UtilsActions {
     static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("NewPersistenceUnit");
 
-    public static void update(Object item) {
+    static EntityManager getEntityManager() {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        em.merge(item);
+        return em;
+    }
+
+
+    static void endTransaction(EntityManager em) {
         em.getTransaction().commit();
         em.close();
     }
 
+    public static void update(Object item) {
+        EntityManager em = getEntityManager();
+        em.merge(item);
+        endTransaction(em);
+    }
+
     public static void delete(Object myObj, int objId){
-        EntityManager em = emf.createEntityManager();
-        em.getTransaction().begin();
+        EntityManager em = getEntityManager();
         em.remove(em.find(myObj.getClass(), objId));
-        em.getTransaction().commit();
-        em.close();
+        endTransaction(em);
     }
 }

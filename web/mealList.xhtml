@@ -6,57 +6,79 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-    <h:form id="todoForm">
-        <div class="sub-container">
-            <h:outputLabel value="New meal"/> <br/>
-            <h:inputText value="#{mealView.meal.name}"/>
-            <h:commandButton action="#{mealActions.insert}" value="Save"/>
+<h:form id="todoForm">
+    <div class="sub-container">
+        <div class="table-title">Meal list</div>
+        <div class="table-form-new-elem" style="background-color:white;">
+            <div class="mdl-textfield mdl-js-textfield" style="margin-top:15px;">
+                <h:inputText styleClass="mdl-textfield__input"
+                             value="#{mealView.meal.name}" type="text" id="sample1"
+                />
+                <label class="mdl-textfield__label material-custom-textfield" for="sample1"
+                >Meal name...</label>
+            </div>
+
+            <h:commandLink action="#{mealActions.insert}" styleClass="button2"
+
+                           value="New">
+
+            </h:commandLink>
         </div>
-        <div class="sub-container">
-            <div>Meal name</div>
-            <h:dataTable id="todoTable" value="#{mealView.mealList}" var="meal" styleClass="mealList"
-                         columnClasses="first, second, third, four" rowClasses="rowClass">
+        <div class="sub-container-content">
+            <ui:repeat value="#{mealView.mealList}" var="meal">
+                <div class="row">
+                    <!-- Left columns-->
+                    <div class="left-col">
+                        <h:inputText rendered="#{meal.editable}" styleClass="input1"
+                                     value="#{meal.name}" type="text" id="sample2"/>
 
-                <!--                first-->
-                <h:column>
-                    <h:inputText styleClass="test" value="#{meal.name}" rendered="#{meal.editable}"/>
-                    <h:outputText value="#{meal.name}" rendered="#{not meal.editable}"/>
-                </h:column>
-
-
-                <h:column>
-                    <h:button value="Details" outcome="meal.xhtml?meal=#{meal.id}" styleClass="button1 blueButton"/>
-                </h:column>
+                        <h:outputText value="#{meal.name}" rendered="#{not meal.editable}"/>
 
 
-                <h:column>
-                    <h:commandLink value="Edit" action="#{mealView.edit(meal)}" styleClass="button1 blueButton"
-                                   rendered="#{not meal.editable}">
-                        <f:ajax render="@form"/>
-                    </h:commandLink>
-                    <h:commandLink value="Save" action="#{mealView.save(meal)}" rendered="#{meal.editable}"
-                                   styleClass="button1 blueButton">
-                        <f:ajax execute="@form" render="@form"/>
-                    </h:commandLink>
-                </h:column>
+                        <h:commandLink action="#{mealView.save(meal)}" rendered="#{meal.editable}"
+                                       styleClass="mdl-button mdl-js-button mdl-button--fab">
+                            <em class="material-icons">save</em>
+                            <f:ajax execute="@form" render="@form"/>
 
 
-                <h:column>
-                    <h:commandLink value="Cancel" action="#{mealView.cancelEdit(meal)}"
-                                   styleClass="button1 blueButton"
-                                   rendered="#{meal.editable}">
-                        <f:ajax render="@form"/>
-                    </h:commandLink>
-                </h:column>
+                        </h:commandLink>
+                    </div>
 
-                <h:column>
-                    <h:commandLink value="Delete" action="#{mealView.delete(meal, meal.id)}"
-                                   styleClass="button1 redButton">
-                        <f:ajax render="@form"/>
-                    </h:commandLink>
-                </h:column>
-            </h:dataTable>
+
+                    <!-- Right cols-->
+                    <div class="right-col">
+                        <h:link value="View" styleClass="button1" outcome="/meal/meal.xhtml">
+                            <f:param name="meal" value="#{meal.id}"/>
+                        </h:link>
+                        &nbsp;
+                        <h:commandLink action="#{mealView.edit(meal)}"
+                                       rendered="#{not meal.editable}"
+                                       styleClass="mdl-button mdl-js-button mdl-button--fab">
+                            <em class="material-icons">edit</em>
+                            <f:ajax render="@form"/>
+                        </h:commandLink>
+
+
+                        <h:commandLink action="#{mealView.cancelEdit(meal)}"
+                                       styleClass="mdl-button mdl-js-button mdl-button--fab"
+                                       rendered="#{meal.editable}">
+                            <em class="material-icons">cancel</em>
+                            <f:ajax render="@form"/>
+                        </h:commandLink>
+
+                        &nbsp;
+                        <h:commandLink action="#{mealView.delete(meal, meal.id)}"
+                                       styleClass="mdl-button mdl-js-button mdl-button--fab">
+                            <em class="material-icons">delete</em>
+                            <f:ajax render="@form"/>
+                        </h:commandLink>
+                    </div>
+                </div>
+            </ui:repeat>
         </div>
-    </h:form>
+
+
+    </div>
+</h:form>
 
 </html>

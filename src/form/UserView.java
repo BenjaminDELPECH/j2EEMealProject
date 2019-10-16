@@ -4,6 +4,7 @@ import actions.UserActions;
 import entity.UserEntity;
 
 import javax.annotation.PostConstruct;
+import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
@@ -13,13 +14,44 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 @ViewScoped
 @Named
 public class UserView implements Serializable {
-    private UserEntity user;
     private boolean subscribing = true;
     private boolean isLogged = false;
+
+    private String username;
+    private String password;
+
+    private ArrayList<String> errors;
+
+
+    public ArrayList<String> getErrors() {
+        return errors;
+    }
+
+    public void setErrors(ArrayList<String> errors) {
+        this.errors = errors;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     private String testText = "test";
 
@@ -40,21 +72,10 @@ public class UserView implements Serializable {
     }
 
 
-    @PostConstruct
-    public void init() {
-        user = new UserEntity();
+    public void switchSubscribing(){
+        subscribing = !subscribing;
+        errors = null;
     }
-
-    public UserEntity getUser() {
-        return user;
-    }
-
-    public void setUser(UserEntity user) {
-        this.user = user;
-    }
-
-
-
 
 
    public boolean isLogged() {

@@ -1,6 +1,7 @@
 
-csquid:UselessImportCheck":Remove this unused import 'javax.persistence.Persistence'.(›²ö¾ıÿÿÿÿ
-gsquid:UselessImportCheck"CRemove this unused import 'javax.persistence.EntityManagerFactory'.(îÜğ
-?squid:S11484"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-Tsquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+Tsquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
 Wsquid:UselessImportCheck".Remove this unused import 'entity.MealEntity'.(‘ Òıÿÿÿÿ
+Fsquid:S1148X"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÃÛ›‘İ-
+gsquid:UselessImportCheck"CRemove this unused import 'javax.persistence.EntityManagerFactory'.(îÜğ
+csquid:UselessImportCheck":Remove this unused import 'javax.persistence.Persistence'.(›²ö¾ıÿÿÿÿ
+Fsquid:S1148E"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ºÉ¡‘İ-

@@ -1,9 +1,14 @@
 
+gsquid:UselessImportCheck"CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Á¨ïë
 Tsquid:UselessImportCheck"0Remove this unused import 'actions.UserActions'.(êòî
-gsquid:UselessImportCheck"CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Á¨ïë
-_squid:UselessImportCheck";Remove this unused import 'javax.servlet.http.HttpSession'.(í¨ô
-asquid:UselessImportCheck"=Remove this unused import 'javax.faces.context.FacesContext'.(¸Öœ
-isquid:UselessImportCheck
-"ERemove this unused import 'javax.faces.view.facelets.FaceletContext'.(ÊÔ«æ
-gsquid:UselessImportCheck"CRemove this unused import 'javax.enterprise.context.SessionScoped'.(¦€ê
-fsquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…
+fsquid:UselessImportCheck";Remove this unused import 'javax.annotation.PostConstruct'.(›ÅÁ8î·İ-
+_squid:UselessImportCheck";Remove this unused import 'javax.servlet.http.HttpSession'.(í¨ô
+Ysquid:UselessImportCheck".Remove this unused import 'entity.UserEntity'.(éº¦8ÎÀ·İ-
+fsquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…
+isquid:UselessImportCheck"ERemove this unused import 'javax.faces.view.facelets.FaceletContext'.(ÊÔ«æ
+squid:S1319 "pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(şƒ‚†8×½‘İ-
+nsquid:UselessImportCheck"CRemove this unused import 'javax.enterprise.context.SessionScoped'.(¦€ê8½’Ûİ-
+squid:S1319$"qThe type of the "errors" object should be an interface such as "List" rather than the implementation "ArrayList".(âã¨¯8×½‘İ-
+asquid:UselessImportCheck	"=Remove this unused import 'javax.faces.context.FacesContext'.(¸Öœ
+nsquid:UselessImportCheck"CRemove this unused import 'javax.enterprise.context.RequestScoped'.(‚Õ…½8Èèµ’İ-
+]squid:UselessImportCheck"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8—™é’İ-

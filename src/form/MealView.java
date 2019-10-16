@@ -1,5 +1,6 @@
 package form;
 
+import actions.UtilsActions;
 import actions.MealActions;
 import entity.MealEntity;
 
@@ -37,12 +38,13 @@ public class MealView implements Serializable {
     }
     public void save(MealEntity item) {
         mealList.set(mealList.indexOf(item), item);
-        MealActions.update(item);
+        UtilsActions.update(item);
         cancelEdit(item);
+
     }
     public void delete(Object myObj, int objId){
         mealList.remove((MealEntity) myObj);
-        MealActions.delete(myObj, objId);
+        UtilsActions.delete(myObj, objId);
     }
 
 
