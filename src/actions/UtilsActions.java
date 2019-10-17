@@ -4,10 +4,14 @@ import entity.MealEntity;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityNotFoundException;
 import javax.persistence.Persistence;
 
-public class UtilsActions {
-    static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("NewPersistenceUnit");
+public final class UtilsActions {
+    private UtilsActions() {
+    }
+
+    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("NewPersistenceUnit");
 
     static EntityManager getEntityManager() {
         EntityManager em = emf.createEntityManager();
@@ -21,13 +25,28 @@ public class UtilsActions {
         em.close();
     }
 
+    public static Object get(Object entityClass , Object primaryKey){
+        EntityManager em = getEntityManager();
+        Object item = em.find(entityClass.getClass(), primaryKey);
+        checkIfItemWasReturned(entityClass, primaryKey, item);
+        endTransaction(em);
+        return item;
+    }
+
+    public static void checkIfItemWasReturned(Object entityClass, Object primaryKey, Object item) {
+        if(item == null){
+            throw new EntityNotFoundException("Item "+entityClass + "+not found : "+ primaryKey);
+        }
+    }
+
+
     public static void update(Object item) {
         EntityManager em = getEntityManager();
         em.merge(item);
         endTransaction(em);
     }
 
-    public static void delete(Object myObj, int objId){
+    public static void delete(Object myObj, int objId) {
         EntityManager em = getEntityManager();
         em.remove(em.find(myObj.getClass(), objId));
         endTransaction(em);

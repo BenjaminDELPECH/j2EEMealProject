@@ -9,7 +9,10 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 >
 <div class="header">
-    <div class="header1">Meal creator</div>
+    <h:form>
+        <h:commandButton action="/index?faces-redirect = true" value="Meal Stats" styleClass="header_title"/>
+    </h:form>
+
     <div class="right-col">
         <h:form>
             <h:commandLink action="#{userActions.loggout}"

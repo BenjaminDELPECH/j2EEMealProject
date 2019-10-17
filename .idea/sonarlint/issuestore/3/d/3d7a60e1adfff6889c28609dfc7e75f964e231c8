@@ -1,7 +1,3 @@
 
-UWeb:AvoidCommentedOutCodeCheck&"Remove this commented out code.(ß¾öêùÿÿÿÿ8È†‚¤Ý-
-UWeb:AvoidCommentedOutCodeCheck$"Remove this commented out code.(î°òžÿÿÿÿÿ8È†‚¤Ý-
-PWeb:AvoidCommentedOutCodeCheck5"Remove this commented out code.(ö¥¤¢8©™¶¦Ý-
-UWeb:AvoidCommentedOutCodeCheck#"Remove this commented out code.(ù²Åˆûÿÿÿÿ8È†‚¤Ý-
-PWeb:AvoidCommentedOutCodeCheck)"Remove this commented out code.(ä íù8È†‚¤Ý-
-PWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(–ªŸ´ûÿÿÿÿ8¬ìÔ£Ý-
+PWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(–ªŸ´ûÿÿÿÿ8£›ö×Ý-
+a	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(–ªŸ´ûÿÿÿÿ8Õ÷¤ÕÝ-

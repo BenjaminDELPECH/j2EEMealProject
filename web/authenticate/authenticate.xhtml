@@ -26,7 +26,7 @@
                     </header>
                     <div class="container-content-authenticateForm">
                         <div>
-                            <h:form class="login-form">
+                            <h:form class="login-view">
                                 <div style="margin-bottom:calc(0.9em + 0.2vw)">
                                     <ui:repeat value="#{userView.errors}" var="error">
                                         <div class="error">
@@ -44,9 +44,6 @@
                                 <h:inputSecret value="#{userView.password}" id="password"
                                              class="login-input"  />
                                 <br/>
-
-
-
                                 <h:commandButton action="#{userActions.register}"
                                                  rendered="#{userView.subscribing}"
                                                  value="#{'Validate'}"

@@ -1,7 +1,5 @@
 package entity;
 
-import javax.faces.view.ViewScoped;
-import javax.inject.Named;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;

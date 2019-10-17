@@ -1,7 +1,7 @@
 package actions;
 
 import entity.MealEntity;
-import form.MealView;
+import view.MealView;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -26,8 +26,6 @@ public class MealActions implements Serializable {
         mealView.setMeal(new MealEntity());
         mealView.setMealList(getAll());
     }
-
-
 
     public static List<MealEntity> getAll(){
         EntityManager em = UtilsActions.getEntityManager();

@@ -1,12 +1,8 @@
 
-=
-src/Main.java,9\2\924f089edb4af5ee45c8a9d1129cd28e2b368138
 L
 src/META-INF/persistence.xml,c\9\c9542b0c61459454efdae90e75de54a72077498b
 J
 src/entity/MealEntity.java,1\4\14efd99af017a7df8379df41c284d88058752448
-F
-src/form/MealView.java,b\4\b44bc8e8f06a11d848fab368f6d82fcc7611d92e
 L
 src/actions/MealActions.java,1\4\14bb140eacd5e0f292f516a8af7e022fcd84baa4
 ?
@@ -15,16 +11,10 @@ K
 web/resources/css/style.css,3\7\375acd7574aed3a6619a1b3253449cbd745bc078
 C
 web/WEB-INF/web.xml,c\d\cdcc12da5c4054f6995aab32914d7e0243194c05
->
-web/meal.xhtml,2\3\23993bb786a30de17fdedb03e30f03d953adc8d9
-M
-src/actions/BasicActions.java,5\6\5620c877e33f98586679c183d4ebea1228a8e962
 B
 web/mealList.xhtml,3\d\3d7a60e1adfff6889c28609dfc7e75f964e231c8
 L
 src/filters/LoginFilter.java,b\1\b18c10af66f7dadbf752a7e56b25bb7fe22592c7
-F
-src/form/UserView.java,f\d\fdc3fbdd1ef4b01c0128e53b1848c95ba99d3187
 L
 src/actions/UserActions.java,d\b\db5f35c67edeed28405467a89cae7be2f241b484
 f
@@ -41,8 +31,6 @@ m
 W.idea/libraries/org_ops4j_pax_tipi_org_ops4j_pax_tipi_mysql_connector_java_5_1_22_1.xml,8\8\8829f4f264f04aa2c7040f50030a74947253f583
 R
 ".idea/libraries/PrimeFaces_6_1.xml,4\7\4707162b8740bf5ddd06e11c1854149e592b3420
-w
-G.idea/sonarlint/issuestore/9/2/924f089edb4af5ee45c8a9d1129cd28e2b368138,f\a\fa75e75cdcbcdff2b0010bc7325ef5a408f526cd
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 E
@@ -61,3 +49,23 @@ S
 #web/authenticate/authenticate.xhtml,4\2\42e43cb6ae02ec448d2b0658093d462f309ff16b
 J
 src/entity/UserEntity.java,5\1\511a6858b9d94179a8160b76089e7de0a3819b15
+C
+web/meal/meal.xhtml,2\e\2efe70719717b455ca5d98fe9a94ea3c1c5a7712
+H
+web/meal/mealStats.xhtml,0\7\07e1f2c0d0709d8b3d62d187795dfa852c914493
+@
+web/header.xhtml,1\2\12380424907cc24517191d4b372b2a37f18a7344
+M
+src/actions/UtilsActions.java,e\1\e10a145e50eeee2e649e79943de5e1538ff4e0ff
+B
+src/test/Main.java,1\a\1afe47e5d1b73c17efc0a301cebed4fd15e4b596
+F
+src/view/UserView.java,4\9\499b6b6af7f275a9e16b7d879d83fd6df31a4094
+F
+src/view/MealView.java,e\b\ebe5df377e4e80994a87b70f6e1edace964124ad
+J
+src/view/MealFoodView.java,c\e\cead3d8832e1a9a9824fe6289ab14fffce5be506
+Q
+!src/entity/MealFoodsEntityPK.java,e\1\e1738960c69f591b37c8b4f81ddf53c70f3a8a06
+O
+src/entity/MealFoodsEntity.java,7\4\74fe0819efaa1b3eb11311d711f94cadfdf08a01
