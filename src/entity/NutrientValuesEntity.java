@@ -9,7 +9,7 @@ import java.util.Objects;
 public class NutrientValuesEntity {
     private int foodId;
     private int nutrientId;
-    private Double value;
+    private Float value;
 
     @Id
     @Column(name = "food_id")
@@ -33,11 +33,11 @@ public class NutrientValuesEntity {
 
     @Basic
     @Column(name = "value")
-    public Double getValue() {
+    public Float getValue() {
         return value;
     }
 
-    public void setValue(Double value) {
+    public void setValue(Float value) {
         this.value = value;
     }
 

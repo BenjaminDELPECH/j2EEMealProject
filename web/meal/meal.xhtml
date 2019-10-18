@@ -19,21 +19,10 @@
     <div class="main-container">
         <ui:include src="../header.xhtml"/>
         <div style="display:inline-block;margin:auto;">
-            <div class="page-container2">
-                <div class="container table-title">
-                    <h:form>
-                        <h:commandLink action="/index?faces-redirect = true"
-                                       styleClass="mdl-button mdl-js-button mdl-button--fab material-button-custom2"
-                   >
-                            <em class="material-icons">arrow_back</em>
-                        </h:commandLink>
-                    </h:form>
-
-
-                    #{mealFoodView.meal.name}
-                </div>
+            <div class="page-container">
+                <ui:include src="title.xhtml" />
                 <div class="container">
-                    <ui:include src="mealStats.xhtml"/>
+                    <ui:include src="mealDetails.xhtml"/>
                 </div>
             </div>
         </div>

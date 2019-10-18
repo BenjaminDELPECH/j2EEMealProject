@@ -63,9 +63,12 @@ div {
 
 .page-container {
     width: 60%;
-    margin: auto;
-    margin-top: var(--distM);
     padding: var(--distS);
+    margin: auto;
+    flex-flow: wrap;
+    display: flex;
+    margin-top: var(--distM);
+}
 }
 @media screen and (max-width: 800px) {
     .page-container {
@@ -116,11 +119,9 @@ div {
 
 .sub-container {
     background-color: #FFF;
-    max-width: 800px;
     display:flex;
-    width:100%;
     flex-flow: wrap;
-    margin:auto;
+    margin:0 auto;
 }
 
 .sub-container-title{
@@ -155,7 +156,8 @@ div {
 }
 
 .input1 {
-    font-size: var(--titleM);
+    font-size: var(--titleL);
+    padding:var(--distS);
 }
 
 .divider {
@@ -166,7 +168,7 @@ div {
 }
 
 .button1 {
-    padding: var(--distS) var(--distS);
+    padding: var(--distM) var(--distXL);
     border-radius: .25rem;
     text-decoration: none;
     border: none;
@@ -232,6 +234,7 @@ a {
 }
 .right-col{
     margin-left:auto;
+    display:flex;
 }
 .mdl-textfield {
     width:initial;
@@ -244,4 +247,11 @@ a {
 }
 .material-button-custom2{
     height:45px;min-height: 45px;width:45px;min-width:45px;
+}
+.centered-vertical{
+    margin:auto var(--distXL);
+}
+.form-custom1{
+    display: flex;
+    margin-left:var(--distM);
 }

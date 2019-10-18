@@ -8,16 +8,29 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 >
+<div class="sub-container" style="width:initial;">
+    <p:dataTable var="nutrientStat" value="#{mealFoodView.nutrientSumValues}">
+        <p:column headerText="Nutrient Name">
+            <h:outputText value="#{nutrientStat.nutrientName}" />
+        </p:column>
+        <p:column headerText="Nutrient Value">
+            <h:outputText value="#{nutrientStat.nutrientSumValue}" />
+        </p:column>
+        <p:column headerText="Percentage">
+            <h:outputText value="#{nutrientStat.percentage}" />
+        </p:column>
 
-<div class="sub-container" style="width:700px;">
-    <div class="sub-container-content">
-        <h:outputLabel value="#{param.meal}"/>
-    </div>
-</div>
+<!--        <p:column headerText="Year">-->
+<!--            <h:outputText value="#{car.year}" />-->
+<!--        </p:column>-->
 
-<div class="sub-container">
-    <div class="sub-container-content">
-        <h:outputLabel value="#{param.meal}"/>
-    </div>
+<!--        <p:column headerText="Brand">-->
+<!--            <h:outputText value="#{car.brand}" />-->
+<!--        </p:column>-->
+
+<!--        <p:column headerText="Color">-->
+<!--            <h:outputText value="#{car.color}" />-->
+<!--        </p:column>-->
+    </p:dataTable>
 </div>
 </html>

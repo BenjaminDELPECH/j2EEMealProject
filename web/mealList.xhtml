@@ -37,7 +37,7 @@
 
 
                         <h:commandLink action="#{mealView.save(meal)}" rendered="#{meal.editable}"
-                                       styleClass="mdl-button mdl-js-button mdl-button--fab material-button-custom1">
+                                       styleClass="mdl-button mdl-js-button mdl-button--fab">
                             <em class="material-icons">save</em>
                             <f:ajax execute="@form" render="@form"/>
                         </h:commandLink>
@@ -51,7 +51,7 @@
                         &nbsp;
                         <h:commandLink action="#{mealView.edit(meal)}"
                                        rendered="#{not meal.editable}"
-                                       styleClass="mdl-button mdl-js-button mdl-button--fab material-button-custom1">
+                                       styleClass="mdl-button mdl-js-button mdl-button--fab">
                             <em class="material-icons">edit</em>
                             <f:ajax execute="@form" render="@form"/>
                         </h:commandLink>
@@ -59,7 +59,7 @@
 
 
                         <h:commandLink action="#{mealView.cancelEdit(meal)}"
-                                       styleClass="mdl-button mdl-js-button mdl-button--fab material-button-custom1"
+                                       styleClass="mdl-button mdl-js-button mdl-button--fab"
                                        rendered="#{meal.editable}">
                             <em class="material-icons">cancel</em>
                             <f:ajax render="@form"/>
@@ -67,7 +67,7 @@
 
                         &nbsp;
                         <h:commandLink action="#{mealView.delete(meal, meal.id)}"
-                                       styleClass="mdl-button mdl-js-button mdl-button--fab material-button-custom1">
+                                       styleClass="mdl-button mdl-js-button mdl-button--fab">
                             <em class="material-icons">delete</em>
                             <f:ajax render="@form"/>
                         </h:commandLink>

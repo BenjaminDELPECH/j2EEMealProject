@@ -37,5 +37,6 @@
     <orderEntry type="library" name="org.ops4j.pax.tipi:org.ops4j.pax.tipi.mysql.connector.java:5.1.22.1" level="project" />
     <orderEntry type="library" name="javax.enterprise:cdi-api:2.0.SP1" level="project" />
     <orderEntry type="library" name="PrimeFaces-6.1" level="project" />
+    <orderEntry type="library" name="PrimeFaces-6.1" level="project" />
   </component>
 </module>

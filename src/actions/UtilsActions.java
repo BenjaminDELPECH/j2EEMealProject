@@ -13,14 +13,14 @@ public final class UtilsActions {
 
     private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("NewPersistenceUnit");
 
-    static EntityManager getEntityManager() {
+    public static EntityManager getEntityManager() {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         return em;
     }
 
 
-    static void endTransaction(EntityManager em) {
+    public static void endTransaction(EntityManager em) {
         em.getTransaction().commit();
         em.close();
     }
@@ -46,9 +46,9 @@ public final class UtilsActions {
         endTransaction(em);
     }
 
-    public static void delete(Object myObj, int objId) {
+    public static void delete(Object myObj, Object primaryKey) {
         EntityManager em = getEntityManager();
-        em.remove(em.find(myObj.getClass(), objId));
+        em.remove(em.find(myObj.getClass(), primaryKey));
         endTransaction(em);
     }
 }

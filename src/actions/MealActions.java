@@ -27,6 +27,8 @@ public class MealActions implements Serializable {
         mealView.setMealList(getAll());
     }
 
+ 
+
     public static List<MealEntity> getAll(){
         EntityManager em = UtilsActions.getEntityManager();
         List<MealEntity> mealList = em.createQuery("from MealEntity ", MealEntity.class).getResultList();

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+>
+
+<div class="container table-title">
+    <h:form>
+        <h:commandLink action="/index?faces-redirect = true"
+                       styleClass="mdl-button mdl-js-button mdl-button--fab material-button-custom2"
+        >
+            <em class="material-icons">arrow_back</em>
+        </h:commandLink>
+    </h:form>
+
+    <div class="centered-vertical">
+        #{mealFoodView.meal.name}
+    </div>
+
+
+</div>
+</html>

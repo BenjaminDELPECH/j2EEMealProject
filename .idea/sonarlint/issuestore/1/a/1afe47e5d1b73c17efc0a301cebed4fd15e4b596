@@ -1,0 +1,11 @@
+
+Jsquid:S1612$",Replace this lambda with a method reference.(Û›Òè8Î”Ä„›-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(òÜÖÛ˙ˇˇˇˇ8üòÒ‚›-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(ˇè¢¬8üòÒ‚›-
+^squid:UselessImportCheck".Remove this unused import 'entity.MealEntity'.(èë†“˝ˇˇˇˇ8üòÒ‚›-
+msquid:S2259$"OA "NullPointerException" could be thrown; "nutrientSumValues" is nullable here.(Û›Òè8∞‰ˇ‚›-
+V
+squid:S106%"9Replace this use of System.out or System.err by a logger.(Ã›≥æ8Î”Ä„›-
+Jsquid:S1602$",Remove useless curly braces around statement(Û›Òè8Î”Ä„›-
+psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(∫ˆ®›8ß™˝‚›-
