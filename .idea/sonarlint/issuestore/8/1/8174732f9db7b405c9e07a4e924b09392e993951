@@ -1,7 +1,7 @@
 
-^squid:UselessImportCheck".Remove this unused import 'view.MealFoodView'.(€„Àâûÿÿÿÿ8®âçÜİ-
-Usquid:UselessImportCheck"*Remove this unused import 'view.UserView'.(ñŞ8“•¼Üİ-
 ]squid:S1118":Add a private constructor to hide the implicit public one.(—ò§Áÿÿÿÿÿ8®âçÜİ-
 [squid:UselessImportCheck
 "0Remove this unused import 'javax.inject.Inject'.(ì–íÔ8˜Äáİ-
+Usquid:UselessImportCheck"*Remove this unused import 'view.UserView'.(ñŞ8“•¼Üİ-
 psquid:UselessImportCheck"FRemove this unused import 'javax.persistence.EntityNotFoundException'.(©ÿ€8ÚñÀÚİ-
+^squid:UselessImportCheck".Remove this unused import 'view.MealFoodView'.(€„Àâûÿÿÿÿ8®âçÜİ-

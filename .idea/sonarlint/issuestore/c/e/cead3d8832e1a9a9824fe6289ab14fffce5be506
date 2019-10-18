@@ -1,10 +1,11 @@
 
+Vsquid:S1948"3Make "nutrientSumValues" transient or serializable.(èÈñïúÿÿÿÿ8¢Ìôáİ-
+|squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(èÈñïúÿÿÿÿ8ê÷ªãİ-
 V
-squid:S106:"9Replace this use of System.out or System.err by a logger.(ÿ¢Â8§Âââİ-
+squid:S1065"9Replace this use of System.out or System.err by a logger.(ÿ¢Â8ôƒªãİ-
+psquid:S001178"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºö¨İ8ôƒªãİ-
+Rsquid:EmptyStatementUsageCheck"Remove this empty statement.(èÈñïúÿÿÿÿ8ê÷ªãİ-
+Msquid:S1948"*Make "foodList" transient or serializable.(Úç¤€ıÿÿÿÿ8Ë¾Ÿİİ-
 esquid:UselessImportCheck"5Remove this unused import 'entity.MealFoodsEntityPK'.(Ä¥ùÈùÿÿÿÿ8ê¤‹áİ-
-Qsquid:S1948"3Make "nutrientSumValues" transient or serializable.(°Ì©×8¢Ìôáİ-
-psquid:S00117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºö¨İ8€óúâİ-
-Zsquid:UselessImportCheck"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8ĞËÙİ-
+Zsquid:UselessImportCheck"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8ĞËÙİ-
 ^squid:UselessImportCheck"3Remove this unused import 'entity.MealFoodsEntity'.(ß÷‚¿8ê¤‹áİ-
-Msquid:S1948"*Make "foodList" transient or serializable.(Úç¤€ıÿÿÿÿ8Ë¾Ÿİİ-
-nsquid:CommentedOutCodeLine3"<This block of commented-out lines of code should be removed.(˜†…óúÿÿÿÿ8ëá×âİ-

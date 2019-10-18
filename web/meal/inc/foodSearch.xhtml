@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+>
+
+<h:form>
+    <div class="foodSearch">
+        <div>Search and add new foods</div>
+        <h:inputText value="#{mealFoodView.foodSearchText}"/>
+        <h:commandButton value="Search" action="#{mealFoodView.searchFood}">
+            <f:ajax render="@form" execute="@form"/>
+        </h:commandButton>
+        <div class="foodResult">
+            <ui:repeat value="#{mealFoodView.searchFoodList}" var="food" id="foodListId">
+                <div class="row">
+                    <div class="name">#{food.nameFr}</div>
+                    <div class="right-col">
+                        <h:commandLink action="#{mealFoodViewActions.insertFoodInMeal(food.id, mealFoodView.meal.id)}"
+                                       styleClass="mdl-button mdl-js-button mdl-button--fab material-button-custom3">
+                            <em class="material-icons">add</em>
+                            <f:ajax render="foodListForm mealStatsForm"/>
+                        </h:commandLink>
+                    </div>
+                </div>
+            </ui:repeat>
+        </div>
+    </div>
+</h:form>
+</html>

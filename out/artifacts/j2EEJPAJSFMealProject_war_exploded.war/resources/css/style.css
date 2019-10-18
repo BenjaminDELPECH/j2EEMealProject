@@ -62,14 +62,13 @@ div {
 }
 
 .page-container {
-    width: 60%;
     padding: var(--distS);
     margin: auto;
     flex-flow: wrap;
     display: flex;
     margin-top: var(--distM);
 }
-}
+
 @media screen and (max-width: 800px) {
     .page-container {
         width:100%;
@@ -136,7 +135,7 @@ div {
 
 @media screen and (min-width: 800px) {
     .sub-container {
-        box-shadow: var(--shadow2);
+        /*box-shadow: var(--shadow2);*/
     }
 }
 
@@ -222,7 +221,6 @@ a {
 .row{
     width:100%;
     display:flex;
-    padding:var(--distS) var(--distM);
     /*box-shadow: var(--shadow2);*/
     /*margin:var(--distM);*/
     border: 1px solid #f1f1f1;
@@ -248,10 +246,57 @@ a {
 .material-button-custom2{
     height:45px;min-height: 45px;width:45px;min-width:45px;
 }
+.material-button-custom3{
+    min-height:31px;
+    height:31px;
+    width:31px;
+    min-width:31px;
+}
 .centered-vertical{
     margin:auto var(--distXL);
 }
 .form-custom1{
     display: flex;
     margin-left:var(--distM);
+}
+.newFoodButton{
+    margin: auto;
+    border: 1px solid #AAAAAA;
+    padding: var(--distM) var(--distL) var(--distM) var(--distM);
+    box-shadow: var(--shadow2);
+    display:flex;
+}
+
+.newFoodButtonContainer{
+    display:flex;
+}
+.mealDetailsLeftHeader{
+    display: flex;
+    margin-bottom:var(--distL);
+    background-color:#FFF;
+    width:100%;
+    box-shadow:var(--shadow1);
+}
+.mealDetailsLeftHeader .item{
+    padding: var(--distS) var(--distM);
+    /* border-bottom: 1px solid #AAA; */
+    background-color: #282828;
+    color: white;
+    text-align: center;
+    width: 50%;
+}
+.item-selected{
+    border-bottom:5px solid white;
+}
+
+.mealDetails-container{
+    width:33.33%;
+    border: 1px solid #000000;
+}
+.name{
+    margin:auto var(--distM);
+}
+.foodSearch{
+    padding:var(--distM);
+    background-color:white;
 }

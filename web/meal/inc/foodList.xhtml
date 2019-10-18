@@ -8,22 +8,27 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 >
-<h:form>
-    <div class="sub-container" style="width:400px;">
+<h:form id="foodListForm">
+    <div class="sub-container">
+        <!--        NEW FOOD-->
 
+
+
+
+        <!--        FOOD LIST-->
         <ui:repeat value="#{mealFoodView.foodList}" var="food">
 
 
             <div class="row">
                 <!-- Left columns-->
-                <div class="left-col">
-                    <h:outputText value="#{food.name}"/>
+                <div class="name">
+                    <h:outputText value="#{food.nameFr}"/>
                 </div>
                 <div class="right-col">
-                    <h:commandLink action="#{mealFoodView.deleteMealFood(food,food.id)}"
-                                   styleClass="mdl-button mdl-js-button mdl-button--fab">
+                    <h:commandLink action="#{mealFoodViewActions.deleteMealFood(food, mealFoodView.meal.id)}"
+                                   styleClass="mdl-button mdl-js-button mdl-button--fab material-button-custom3">
                         <em class="material-icons">delete</em>
-                        <f:ajax render="@form"/>
+                        <f:ajax render="foodListForm mealStatsForm"/>
                     </h:commandLink>
                 </div>
             </div>
