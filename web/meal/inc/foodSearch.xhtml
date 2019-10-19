@@ -12,7 +12,7 @@
 <h:form>
     <div class="foodSearch">
         <div>Search and add new foods</div>
-        <h:inputText value="#{mealFoodView.foodSearchText}"/>
+        <h:inputText value="#{mealFoodView.foodSearchText}" required="true"/>
         <h:commandButton value="Search" action="#{mealFoodView.searchFood}">
             <f:ajax render="@form" execute="@form"/>
         </h:commandButton>

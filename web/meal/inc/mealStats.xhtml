@@ -10,27 +10,26 @@
 >
 <h:form id="mealStatsForm">
     <p:dataTable var="nutrientStat" value="#{mealFoodView.nutrientSumValues}">
-        <p:column headerText="Nutrient Name">
-            <h:outputText value="#{nutrientStat.nutrientName}" />
-        </p:column>
-        <p:column headerText="Nutrient Value">
-            <h:outputText value="#{nutrientStat.nutrientSumValue}" />
-        </p:column>
-        <p:column headerText="Percentage">
-            <h:outputText value="#{nutrientStat.percentage}" />
-        </p:column>
+            <p:column headerText="Nutrient Name"  rendered="#{nutrientStat.nutrientSumValue gt 0}">
+                <h:outputText value="#{nutrientStat.nutrientName}"/>
+            </p:column>
+        <p:column headerText="Nutrient Value" rendered="#{nutrientStat.nutrientSumValue gt 0}">
 
-<!--        <p:column headerText="Year">-->
-<!--            <h:outputText value="#{car.year}" />-->
-<!--        </p:column>-->
+            <div>
+                #{nutrientStat.nutrientSumValue} / #{nutrientStat.requirement } #{nutrientStat.unit}
+            </div>
+        </p:column>
+            <p:column headerText="Nutrient Value" rendered="#{nutrientStat.nutrientSumValue gt 0}">
+                <h:panelGroup rendered="#{nutrientStat.requirement gt 0}">
+                    <div class="percentage-bar-container">
+                        <div class="percentage-bar"
+                             style="width:#{nutrientStat.nutrientSumValue *100 / nutrientStat.requirement }%">
+                        </div>
+                    </div>
+                </h:panelGroup>
+            </p:column>
 
-<!--        <p:column headerText="Brand">-->
-<!--            <h:outputText value="#{car.brand}" />-->
-<!--        </p:column>-->
-
-<!--        <p:column headerText="Color">-->
-<!--            <h:outputText value="#{car.color}" />-->
-<!--        </p:column>-->
     </p:dataTable>
+
 </h:form>
 </html>

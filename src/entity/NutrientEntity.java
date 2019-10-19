@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "nutrient", schema = "mealcreator", catalog = "")
+@Table(name = "nutrient", schema = "mealcreator")
 public class NutrientEntity {
     private int id;
     private String name;
@@ -39,6 +39,7 @@ public class NutrientEntity {
     public void setUnit(String unit) {
         this.unit = unit;
     }
+
 
     @Override
     public boolean equals(Object o) {

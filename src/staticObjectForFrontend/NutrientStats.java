@@ -2,13 +2,16 @@ package staticObjectForFrontend;
 
 public class NutrientStats {
     private String nutrientName;
-    private Double nutrientSumValue;
-    private Float percentage;
+    private int nutrientSumValue;
+    private float requirement;
+    private String unit;
 
-    public NutrientStats(String nutrientName, Double nutrientSumValue) {
+
+    public NutrientStats(String nutrientName, int nutrientSumValue, float requirement, String unit) {
         this.nutrientName = nutrientName;
         this.nutrientSumValue = nutrientSumValue;
-        this.percentage = 50f;
+        this.requirement = requirement;
+        this.unit = unit;
     }
 
     public String getNutrientName() {
@@ -19,19 +22,27 @@ public class NutrientStats {
         this.nutrientName = nutrientName;
     }
 
-    public Double getNutrientSumValue() {
+    public int getNutrientSumValue() {
         return nutrientSumValue;
     }
 
-    public void setNutrientSumValue(Double nutrientSumValue) {
+    public void setNutrientSumValue(int nutrientSumValue) {
         this.nutrientSumValue = nutrientSumValue;
     }
 
-    public Float getPercentage() {
-        return percentage;
+    public float getRequirement() {
+        return requirement;
     }
 
-    public void setPercentage(Float percentage) {
-        this.percentage = percentage;
+    public void setRequirement(float requirement) {
+        this.requirement = requirement;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 }

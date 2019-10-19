@@ -36,7 +36,7 @@ public class UserActions implements Serializable{
             String errorMsg= "Ce nom d'utilisateur est déjà utilisé";
             addGlobalError(errorMsg);
         }
-
+        UtilsActions.endTransaction(em);
       }
 
     public void loggin(){

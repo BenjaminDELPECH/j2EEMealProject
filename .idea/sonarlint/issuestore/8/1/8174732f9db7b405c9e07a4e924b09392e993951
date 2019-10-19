@@ -1,7 +1,4 @@
 
-]squid:S1118":Add a private constructor to hide the implicit public one.(—ò§Áÿÿÿÿÿ8®âçÜİ-
-[squid:UselessImportCheck
-"0Remove this unused import 'javax.inject.Inject'.(ì–íÔ8˜Äáİ-
-Usquid:UselessImportCheck"*Remove this unused import 'view.UserView'.(ñŞ8“•¼Üİ-
-psquid:UselessImportCheck"FRemove this unused import 'javax.persistence.EntityNotFoundException'.(©ÿ€8ÚñÀÚİ-
-^squid:UselessImportCheck".Remove this unused import 'view.MealFoodView'.(€„Àâûÿÿÿÿ8®âçÜİ-
+wsquid:S2293["YReplace the type specification in this constructor call with the diamond operator ("<>").(áœü8ö’èšŞ-
+esquid:S1192,"GDefine a constant instead of duplicating this literal "mealId" 3 times.(Œº¦ç8ö’èšŞ-
+psquid:S00117y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºö¨İ8ö’èšŞ-

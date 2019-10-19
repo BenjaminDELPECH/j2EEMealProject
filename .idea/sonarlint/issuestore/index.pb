@@ -147,3 +147,15 @@ Z
 *web/resources/material/material.min.js.map,8\e\8ea7a88c99fed5532b48c2211a55fbb0594c0d0b
 S
 #web/resources/material/package.json,2\9\299d30b7ef14dbf6cc28134b19a13e1e4fa09d08
+F
+web/profil/index.xhtml,1\2\126ad1627013ce4f315d3d89fc5ef0f42c766089
+K
+web/meal/inc/foodList.xhtml,1\e\1e505859c2b6e4a7ae66cc32275a20db41c7e931
+K
+src/utils/RedirectBean.java,d\b\dbb007e2658c562ea4b5bb77e33e8011435944bb
+M
+web/meal/inc/foodSearch.xhtml,2\a\2a10ceb250b532388bba9280ba8ca02e2b6068f8
+L
+web/meal/inc/mealStats.xhtml,f\4\f4e382e4c4cdf01904b6eab1be42a74ce4f41662
+P
+ src/actions/NutrientActions.java,3\a\3ab59a86165c13efb9b668dc56905aeef093b849

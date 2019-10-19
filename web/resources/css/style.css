@@ -10,7 +10,7 @@
     --maxWidthContainer: 1000px;
     --titleM: calc(1.1em + 0.1vw);
     --titleL: calc(1.5em + 0.2vw);
-    --themeColor1 : #e20a00;
+    --themeColor1: #e20a00;
 }
 
 html {
@@ -22,7 +22,7 @@ body {
     margin: 0;
     padding: 0;
 
-    font-family: "Helvetica","Arial",sans-serif;;
+    font-family: "Helvetica", "Arial", sans-serif;;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -71,22 +71,23 @@ div {
 
 @media screen and (max-width: 800px) {
     .page-container {
-        width:100%;
+        width: 100%;
         margin: initial;
         padding: initial;
 
     }
 }
 
-.page-container2{
-    display:flex;
+.page-container2 {
+    display: flex;
     margin: auto;
     margin-top: var(--distM);
     padding: var(--distS);
     flex-flow: wrap;
     justify-content: center;
 }
-.container{
+
+.container {
     display: flex;
     margin: auto;
     width: 100%;
@@ -102,10 +103,7 @@ div {
 }
 
 .header_title {
-    cursor: pointer;
     font-size: var(--titleL);
-    border: initial;
-    background: initial;
 }
 
 .division {
@@ -118,19 +116,20 @@ div {
 
 .sub-container {
     background-color: #FFF;
-    display:flex;
+    display: flex;
     flex-flow: wrap;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
-.sub-container-title{
+.sub-container-title {
 
 }
-.sub-container-content{
-    display:flex;
-    width:100%;
+
+.sub-container-content {
+    display: flex;
+    width: 100%;
     flex-flow: wrap;
-    padding:var(--distM);
+    padding: var(--distM);
 }
 
 @media screen and (min-width: 800px) {
@@ -156,7 +155,7 @@ div {
 
 .input1 {
     font-size: var(--titleL);
-    padding:var(--distS);
+    padding: var(--distS);
 }
 
 .divider {
@@ -200,7 +199,7 @@ div {
 }
 
 .table-title {
-    width:100%;
+    width: 100%;
     padding: var(--distM);
     background-color: var(--themeColor1);
     color: white;
@@ -208,76 +207,89 @@ div {
     box-shadow: var(--shadow2);
 }
 
-a {
-    margin: 1em;
-}
+
 
 .table-form-new-elem {
     padding: var(--distM);
 }
 
 
-
-.row{
-    width:100%;
-    display:flex;
+.row {
+    width: 100%;
+    display: flex;
     /*box-shadow: var(--shadow2);*/
     /*margin:var(--distM);*/
     border: 1px solid #f1f1f1;
+    padding: var(--distS) 0;
 }
 
-.left-col{
+.left-col {
     align-items: center;
     display: flex;
 }
-.right-col{
-    margin-left:auto;
-    display:flex;
-}
-.mdl-textfield {
-    width:initial;
-}
-.material-button-custom1{
-    min-height:39px;
-    height:39px;
-    width:39px;
-    min-width:39px;
-}
-.material-button-custom2{
-    height:45px;min-height: 45px;width:45px;min-width:45px;
-}
-.material-button-custom3{
-    min-height:31px;
-    height:31px;
-    width:31px;
-    min-width:31px;
-}
-.centered-vertical{
-    margin:auto var(--distXL);
-}
-.form-custom1{
+
+.right-col {
+    margin-left: auto;
     display: flex;
-    margin-left:var(--distM);
+    margin-right: var(--distM);
+    align-items: center;
 }
-.newFoodButton{
+
+.mdl-textfield {
+    width: initial;
+}
+
+.material-button-custom1 {
+    min-height: 39px;
+    height: 39px;
+    width: 39px;
+    min-width: 39px;
+}
+
+.material-button-custom2 {
+    height: 45px;
+    min-height: 45px;
+    width: 45px;
+    min-width: 45px;
+}
+
+.material-button-custom3 {
+    min-height: 25px;
+    height: 25px;
+    width: 25px;
+    min-width: 25px;
+}
+
+.centered-vertical {
+    margin: auto var(--distXL);
+}
+
+.form-custom1 {
+    display: flex;
+    margin-left: var(--distM);
+}
+
+.newFoodButton {
     margin: auto;
     border: 1px solid #AAAAAA;
     padding: var(--distM) var(--distL) var(--distM) var(--distM);
     box-shadow: var(--shadow2);
-    display:flex;
+    display: flex;
 }
 
-.newFoodButtonContainer{
-    display:flex;
-}
-.mealDetailsLeftHeader{
+.newFoodButtonContainer {
     display: flex;
-    margin-bottom:var(--distL);
-    background-color:#FFF;
-    width:100%;
-    box-shadow:var(--shadow1);
 }
-.mealDetailsLeftHeader .item{
+
+.mealDetailsLeftHeader {
+    display: flex;
+    margin-bottom: var(--distL);
+    background-color: #FFF;
+    width: 100%;
+    box-shadow: var(--shadow1);
+}
+
+.mealDetailsLeftHeader .item {
     padding: var(--distS) var(--distM);
     /* border-bottom: 1px solid #AAA; */
     background-color: #282828;
@@ -285,18 +297,38 @@ a {
     text-align: center;
     width: 50%;
 }
-.item-selected{
-    border-bottom:5px solid white;
+
+.item-selected {
+    border-bottom: 5px solid white;
 }
 
-.mealDetails-container{
-    width:33.33%;
+.mealDetails-container {
+    width: 33.33%;
     border: 1px solid #000000;
 }
-.name{
-    margin:auto var(--distM);
+
+.name {
+    margin: auto var(--distM);
 }
-.foodSearch{
-    padding:var(--distM);
-    background-color:white;
+
+.foodSearch {
+    padding: var(--distM);
+    background-color: white;
+}
+
+.profilButton {
+    font-size: 25px;
+    display: flex;
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+.profilButtonText {
+    display: flex;
+    align-items: center;
+}
+.percentage-bar{
+    padding:var(--distS);
+    background-color: #191919;
+    color: #e6e6e6;
 }

@@ -102,7 +102,7 @@ public class MealFoodViewActions {
         query.setParameter("mealId", 482);
         List<Tuple> results= null;
         if(query.getResultList()!=null && !query.getResultList().isEmpty()){
-            Query query2 = em.createQuery("Select sum (nv.value), n.name from NutrientValuesEntity nv, NutrientEntity n where nv.nutrientId = n.id and nv.foodId in :foodList group by nv.nutrientId", Tuple.class);
+            Query query2 = em.createQuery("Select sum (nv.value), n.name, n.id from NutrientValuesEntity nv, NutrientEntity n where nv.nutrientId = n.id and nv.foodId in :foodList group by nv.nutrientId", Tuple.class);
             query2.setParameter("foodList", query.getResultList());
             results =(List<Tuple>)query2.getResultList();
         }
@@ -114,8 +114,12 @@ public class MealFoodViewActions {
     public static void generateNutrientStatList(List<NutrientStats> nutrientStatsList, List<Tuple> tuples) {
         tuples.forEach(tuple -> {
             Double sumValue = (Double) tuple.get(0);
+            int nutrientId = (int)tuple.get(2);
+            int sumValueRounded =(int) Math.round(sumValue);
+            float nutrientRequirement = NutrientActions.getNutrientRequirement(nutrientId);
+            String unit = NutrientActions.getNutrientUnit(nutrientId);
             String nutrient_name = (String) tuple.get(1);
-            NutrientStats nutrientStats = new NutrientStats(nutrient_name, sumValue);
+            NutrientStats nutrientStats = new NutrientStats(nutrient_name, sumValueRounded, nutrientRequirement, unit);
             nutrientStatsList.add(nutrientStats);
         });
     }
