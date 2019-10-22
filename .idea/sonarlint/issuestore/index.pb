@@ -159,3 +159,7 @@ L
 web/meal/inc/mealStats.xhtml,f\4\f4e382e4c4cdf01904b6eab1be42a74ce4f41662
 P
  src/actions/NutrientActions.java,3\a\3ab59a86165c13efb9b668dc56905aeef093b849
+O
+src/entity/FoodsFoodEntity.java,3\9\39a8c59961b72dd5d8a7ecb1a52cdff07918aa99
+[
++src/entity/NutrientsRequirementsEntity.java,1\0\101a20a27ce0cad349dce2b89c3d4795faee738b

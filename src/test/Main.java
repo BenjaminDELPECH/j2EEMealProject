@@ -1,16 +1,8 @@
 package test;
 
 import actions.UtilsActions;
-import entity.MealEntity;
-import entity.MealFoodsEntity;
-import staticObjectForFrontend.NutrientStats;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
-
-import static actions.MealFoodViewActions.generateNutrientStatList;
-import static actions.MealFoodViewActions.getNutrientStatsFromDB;
 
 public class Main {
     public static void main(String[] args) {

@@ -304,7 +304,8 @@ div {
 
 .mealDetails-container {
     width: 33.33%;
-    border: 1px solid #000000;
+    border: 1px solid #d90000;
+    background-color:white;
 }
 
 .name {

@@ -68,7 +68,7 @@ public class MealFoodViewActions {
     public static List<FoodsFoodEntity> getFoodSearchList(String textSearch) {
         EntityManager em = UtilsActions.getEntityManager();
         Query query = em.createQuery("from FoodsFoodEntity where nameFr like :textSearch");
-        query.setParameter("textSearch", "%" + textSearch + "%");
+        query.setParameter("textSearch", textSearch + "%");
         List<FoodsFoodEntity> results = null;
         results = query.getResultList();
         UtilsActions.endTransaction(em);
@@ -91,7 +91,7 @@ public class MealFoodViewActions {
         List<NutrientStats> nutrientStatsList = new ArrayList<NutrientStats>();
         List<Tuple> tuples = getNutrientStatsFromDB();
         if (tuples != null && !tuples.isEmpty()) {
-            generateNutrientStatList(nutrientStatsList, tuples);
+            NutrientActions.generateNutrientStatList(nutrientStatsList, tuples);
         }
         return nutrientStatsList;
     }
@@ -109,19 +109,6 @@ public class MealFoodViewActions {
 
         UtilsActions.endTransaction(em);
         return results;
-    }
-
-    public static void generateNutrientStatList(List<NutrientStats> nutrientStatsList, List<Tuple> tuples) {
-        tuples.forEach(tuple -> {
-            Double sumValue = (Double) tuple.get(0);
-            int nutrientId = (int)tuple.get(2);
-            int sumValueRounded =(int) Math.round(sumValue);
-            float nutrientRequirement = NutrientActions.getNutrientRequirement(nutrientId);
-            String unit = NutrientActions.getNutrientUnit(nutrientId);
-            String nutrient_name = (String) tuple.get(1);
-            NutrientStats nutrientStats = new NutrientStats(nutrient_name, sumValueRounded, nutrientRequirement, unit);
-            nutrientStatsList.add(nutrientStats);
-        });
     }
 
 }
